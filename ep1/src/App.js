@@ -1,19 +1,21 @@
 import './App.css';
+import { User } from './User.js'
 
 function App() {
+    const users = [
+        {name: 'Tikka', age: 21, email: 'tikka@tikka.com'},
+        {name: 'Jake', age: 11, email: 'NoNe'},
+        {name: 'Tobby', age: 17, email: 'tobby@tobby.com'}
+    ]
   return (
-    <div className="App"> <User/> </div>
+    <div className="App"> 
+      {users.map((user, key) => {
+          return <User name = {user.name} age = {user.age} email = {user.email}/>
+      })}
+    </div>
   );
 }
 
-const User = () => {   // Components should start with capital letter!!
-    return (
-        <div>
-            <h1>Tikka</h1>
-            <h2>21</h2>
-            <h2>tikka@tikka.com</h2>
-        </div> 
-    )
-};
+
 
 export default App;
