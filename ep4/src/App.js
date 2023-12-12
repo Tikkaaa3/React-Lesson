@@ -21,7 +21,7 @@ function App() {
       <input type='text' onChange={handleInputChange}/>
       {inputValue}
 
-      <button type='button' onClick={() => {setChangeColor(changeColor === 'black' ? 'red' : 'black')}}>change color</button>
+      <button type='button' onClick={() => {setChangeColor(changeColor === 'blue' ? 'red' : 'blue')}}>change color</button>
       <button type='button' onClick={() => {setShowText(!showText)}}>show/hide</button>
       {showText && <h1 style={{color: changeColor}}>HELLO I AM TIKKA</h1>}
 
