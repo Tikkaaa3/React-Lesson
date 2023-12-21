@@ -17,6 +17,7 @@ function App() {
         setTodos([...todos, todo])
         setTodo({name: ''})
     }
+
     const deleteTodo = (todoID) => {
         setTodos(todos.filter((task) => {
             return task.id === todoID ? false : true
