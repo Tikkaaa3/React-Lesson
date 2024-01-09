@@ -11,7 +11,11 @@ export const AppContext = createContext()
 
 function App() {
   const [username, setUsername] = useState('')
-  const client = new QueryClient()
+  const client = new QueryClient({defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false
+    }
+  }})
   return (
     <AppContext.Provider value={{ username, setUsername }}>
       <div className="App">
